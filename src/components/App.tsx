@@ -1,40 +1,21 @@
-import { Counter } from './Counter';
+import { RecoilRoot } from 'recoil';
+import { Provider } from 'jotai';
 import { Card } from './Card';
-import { DataInput } from './DataInput';
+import { Counter } from './Counter';
+import { DataConsumer } from './DataConsumer';
 
 export function App() {
   return (
     <div className="App">
-      <Counter />
-
-      <DataInput />
-
-      <Card title="Parent One">
-        <Card title="Parent Two" />
-        <Card title="Parent Three">
-          <DataInput />
-        </Card>
-      </Card>
-
-      <Card title="Level 0" columns>
-        <Card title="Level 1">
-          <Card title="Level 2" columns>
-            <Card title="Level 3">
-              <Card title="Data Consumer" />
-            </Card>
-            <Card title="Level 3">
-              <DataInput />
-            </Card>
-          </Card>
-        </Card>
-        <Card title="Level 1">
-          <Card title="Data Consumer" />
-          <Card title="Level 2">
-            <Card title="Data Consumer" />
-          </Card>
-          <Card title="Data Consumer" />
-        </Card>
-      </Card>
+      {/* <ContextProvider value={DefaultContextValue}> */}
+      <RecoilRoot>
+      {/* <Provider> */}
+        <Counter />
+        <DataConsumer />
+        <DataConsumer />
+      {/* </Provider> */}
+      </RecoilRoot>
+      {/* </ContextProvider> */}
     </div>
   );
 }
