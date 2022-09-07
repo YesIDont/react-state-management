@@ -1,6 +1,6 @@
 import { RecoilRoot } from 'recoil';
-import { Provider } from 'jotai';
-import { Card } from './Card';
+// import { Provider } from 'jotai';
+// import { Card } from './Card';
 import { Counter } from './Counter';
 import { DataConsumer } from './DataConsumer';
 
@@ -9,11 +9,11 @@ export function App() {
     <div className="App">
       {/* <ContextProvider value={DefaultContextValue}> */}
       <RecoilRoot>
-      {/* <Provider> */}
+        {/* <Provider> */}
         <Counter />
         <DataConsumer />
         <DataConsumer />
-      {/* </Provider> */}
+        {/* </Provider> */}
       </RecoilRoot>
       {/* </ContextProvider> */}
     </div>

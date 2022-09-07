@@ -1,10 +1,10 @@
-import { useAtom } from 'jotai';
-import React, { useContext, useState } from 'react';
+import React /* , { useContext, useState } */ from 'react';
+// import { useAtom } from 'jotai';
 import { useRecoilState } from 'recoil';
-import { UserClickContext } from '../store/Context';
-import { clicksCount } from '../store/Jotai';
+// import { UserClickContext } from '../store/Context';
+// import { clicksCount } from '../store/Jotai';
 import { RecoilStore } from '../store/Recoil';
-import { useZustandStore } from '../store/Zustand';
+// import { useZustandStore } from '../store/Zustand';
 import { Card } from './Card';
 
 export const DataConsumer: React.FC = () => {

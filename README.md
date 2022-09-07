@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+Stores current architecture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- multiple monolitic stores linked to one another.
+- few small stores relatively easy to refactor
+- components internal state made with useState or useReducer
 
-## Available Scripts
+What problems we could solve by using Jotai or Zustand?
 
-In the project directory, you can run:
+- no issue with components requireing data from provider that is used within the same component
+- less providers
+- less boilerplate in general
 
-### `yarn start`
+Goals
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- improve the codebase with ease to learn, modify and maitain code
+- use as much of the current code if possible
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Restrictions
 
-### `yarn test`
+- any refactor would have to be minimal with the smallest impact on tests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+From the point of view of business is it vialable to refactor any of the AutoTrader stores to Jotai or Zustand?
 
-### `yarn build`
+- Jotai and reducers
+- differences in approach
+- tests
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Should we start using Jotai or Zustand to create new stores?
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- AutoTrader is not bound by package size as much as regular web page
+-
+- how to create new state with Jotai, should we use Redux with it?
+- how to create new state with Zustand
+- tests
